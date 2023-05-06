@@ -1157,10 +1157,215 @@ input::placeholder{
   background-color: var(--color-pink);
 }
 
+img.empty_gallery{
+  width: 25rem;
+  opacity: .75;
+}
+
+.empty__box--container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+
+.empty__box--container p{
+  font-size: 1.25rem;
+  color: gray;
+  margin-bottom: 3rem;
+}
+
+.my__dreams{
+  min-height: 100vh;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+}
+
+.my__dreams .dream{
+  width: 20rem;
+  background-color: rgba(45, 50, 64, 0.241);
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  transition: all ease-in-out 500ms;
+  cursor: pointer;
+}
+.my__dreams .dream__date{
+  font-size: 2rem;
+  margin-bottom: .75rem;
+}
+
+.my__dreams .dream__duration{
+  color: gray;
+  margin-bottom: 2rem;
+}
+
+.my__dreams .container{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start
+}
+
+.my__dreams .dream p{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.25rem;
+  opacity: .75;
+}
+
+.my__dreams .dream:hover{
+  background-color: #00eeff3e;
+}
+
+.my__dreams .container h1{
+  font-weight: 400;
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+}
+
+.dreams_list{
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.dream_science{
+  padding-top: 10rem;
+}
+
+.dream_science .container{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  padding-bottom: 5rem;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.dream_science .container form{
+  width: 35rem;
+  max-width: 100%;
+}
+
+.dream_science .container h5{
+  font-size: 1.25rem;
+  margin-bottom: 4rem;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: gray;
+}
+
+.dream_science .container form input,
+.dream_science .container form textarea{
+  padding: .5rem;
+  background-color: rgba(255, 255, 255, 0.751);
+  font-size: 1.25rem;
+  font-weight: 400 !important;
+}
 
 
+.dream_science .container form label{
+  font-size: 1.25rem;
+  margin-bottom: .5rem;
+}
+
+.submit_predict{
+  margin-top: 3.5rem;
+  background: var(--text-bg);
+  border: none;
+  cursor: pointer;
+  transition: all ease-in-out 500ms;
+}
+
+.submit_predict:hover{
+  background: none;
+  background-color: var(--color-blue) !important;
+}
 
 
+.dream_results--title{
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.dream_results{
+  width: 50rem;
+  max-width: 100%;
+  font-size: 1.25rem;
+  margin-top: 3.5rem;
+  color: rgb(191, 191, 191);
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.more__dreams{
+  width: 35rem;
+  max-width: 100%;
+  margin-top: 3rem;
+  color: gray;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.another__dream{
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.more__dreams button{
+  font-size: 1.255rem;
+  padding: .5rem 2rem !important;
+}
+
+.unique__blog{
+  align-items: center !important;
+
+}
+
+.unique__blog--title{
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+}
+
+.unique__blog--footer{
+  color: gray;
+  display: flex;
+  align-items: flex-end;
+  margin-top: 2rem;
+}
+
+.unique__blog--footer span:first-of-type{
+  font-size: 1.25rem;
+}
+
+
+.unique__blog--desc{
+  font-size: 1.5rem;
+  line-height: 2rem;
+  width: 70%;
+  max-width: 100%;
+  color: rgb(174, 174, 174);
+}
+
+.blog__paragraph{
+  margin-bottom: 1rem;
+}
 
 
 
