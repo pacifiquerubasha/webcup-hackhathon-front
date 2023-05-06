@@ -1019,7 +1019,7 @@ section.about .container>div{
   justify-content: flex-start;
 }
 
-.login-container>div{
+.login-container>form{
   width: 50%;
   padding: 4rem;
   display: flex;
