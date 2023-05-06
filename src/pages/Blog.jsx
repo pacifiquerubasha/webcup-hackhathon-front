@@ -4,9 +4,11 @@ import Footer from '../components/Footer';
 import blogImage from "../assets/about-hero.jpg"
 import { dreamArticles } from './content';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
+import { useNavigate } from 'react-router-dom';
 
 function Blog(props) {
 
+    const navigate = useNavigate();
     const [animationParent] = useAutoAnimate();
 
     const [currentFilter, setCurrentFilter] = useState("All");
@@ -42,8 +44,6 @@ function Blog(props) {
 
 
 
-
-
     return (
         <>
             <Header/>
@@ -60,6 +60,7 @@ function Blog(props) {
 
                 <section className="blogs">
                     <div className="container flex flex-col">
+                        
                         <div className="filters flex justify-center w-full">
                             {filters.map((filter, i)=>{
                                 return (
@@ -77,7 +78,7 @@ function Blog(props) {
 
                                 {filteredDreams.map((article, i)=>{
                                     return (
-                                        <div className="article flex flex-col">
+                                        <div onClick={()=>navigate(`/blog/${article.id}`)} className="article flex flex-col">
                                             <img src={blogImage} alt="" />
 
                                             <div className='article-content flex flex-col'>

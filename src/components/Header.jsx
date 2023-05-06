@@ -31,10 +31,10 @@ function Header({isUser}) {
 
                     <>
                         <li>
-                            <a onClick={()=>navigate("/app")}>Science of Dreams</a>
+                            <a onClick={()=>navigate("/app")}>Dream Gallery</a>
                         </li>
                         <li>
-                            <a onClick={()=>navigate("/app/gallery")}>Dream Gallery</a>
+                            <a onClick={()=>navigate("/app/explain-dreams")}>Science of Dreams</a>
                         </li>                        
                     
                     </>:
@@ -46,9 +46,9 @@ function Header({isUser}) {
                         <li>
                             <a onClick={()=>navigate("/blog")}>Blog</a>
                         </li>
-                        <li>
+                        {/* <li>
                             <a href="">Services</a>
-                        </li>                    
+                        </li>                     */}
                         <li>
                             <a href="">Contact</a>
                         </li>                    
