@@ -1,0 +1,213 @@
+/* GENERAL STYLES */
+.visuallyHidden {
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px; width: 1px; 
+    margin: -1px; padding: 0; border: 0; 
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hamburger {
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.hamburger .bar {
+    padding: 0;
+    width: 30px;
+    height: 4px;
+    background-color:#00F0FF;
+    display: block;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out;
+    position: absolute; 
+}
+
+.bar1 {
+    top: 0;
+}
+
+.bar2,
+.bar3 {
+    top: 13.5px;
+}
+
+.bar3 {
+    right: 0;
+}
+
+.bar4 {
+    bottom: 0;
+}
+
+/* HAMBURGER 1 */
+.checkbox1:checked + label > .hamburger1 > .bar1{
+    transform: rotate(45deg);
+    transform-origin: 5%;
+    width: 41px
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar2 {
+    transform: translateX(-40px);
+    background-color: transparent;
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar3 {
+    transform: translateX(40px);
+    background-color: transparent;
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar4 {
+    transform-origin: 5%;
+    transform: rotate(-45deg);
+    width: 41px;
+}
+
+
+.toggle-menu{
+    align-items: center;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+  
+
+@media screen and (max-width:1380px){
+    .hero h1{
+        font-size: 3rem;
+    }
+
+}
+
+@media screen and (max-width:1180px){
+    .timeline{
+        width: 80% !important;
+    }
+
+    .container{
+        width: 90% !important;
+    }
+
+    .section-title h3{
+        font-size: 2rem !important;
+    }
+
+    .solution span, .timeline-element{font-size: 1.5rem !important;}
+    .stat .total{font-size: 3rem !important;}
+    .stat .label, .section-cta .container p{font-size: 1.25rem !important;}
+    .call-left h1{
+        font-size: 2.25rem;
+    }
+
+    .call-left h1::after {
+        width: 12rem !important;
+        height: 2.5rem !important;
+    }
+
+    .section-cta .container h4{
+        font-size: 2.5rem !important;
+    }
+    
+    
+}
+
+@media screen and (max-width:1024px){
+    .hero p{
+        max-width: 80% !important;
+    }
+    
+    .container, .solutions, .footer-top, .call-container{
+        flex-direction: column;
+        align-items: center !important;
+    }
+
+    .solution{
+        width: 60% !important;
+    }
+
+    .call-left, .call-right{
+        width: 75% !important;
+        margin-bottom: 2.5rem;
+    }
+
+    .hero h1{text-align: center;}
+    
+
+
+    
+}
+
+@media screen and (max-width:768px){
+    .container-left, .container-right{
+        width: 90% !important;
+    }
+    .container-right img{width: 75% !important;}
+    section{
+        padding: 2.5rem 0 !important;
+    }
+
+    .call-left, .call-right{
+        width: 90% !important;
+        margin-bottom: 2.5rem;
+    }
+
+    .footer-top p{
+        width: 60% !important;
+    }
+
+    .toggle-menu{
+        display: flex;
+    }
+
+    header{
+        position: relative;
+        padding: 1.5rem 0 !important;
+    }
+
+    .toggle-menu{
+        margin-right: 5%;
+    }
+    .logo{
+        margin-left: 5%;
+        position: relative;
+        z-index: 999;
+    }
+
+    header nav{
+        position: absolute;
+        width: 100%;
+        background-color: black;
+        height: 100vh;
+        flex-direction: column;
+        
+    }
+
+    header nav ul{
+        flex-direction: column;
+        
+    }
+
+
+    
+}

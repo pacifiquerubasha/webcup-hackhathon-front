@@ -1,3 +1,1 @@
 
-export const SITE_KEY = '6LfqduklAAAAAJHTG-BKy0iSGmD7VGcRzfdWkUaF';
-export const SECRET_KEY = '6LfqduklAAAAAA0obdZ9gPsvLbgRyG6EcgsJLG8s'

@@ -1,5 +1,11 @@
 import bulb from "../assets/bulb.jpg";
 import member from "../assets/about-hero.jpg";
+import gal1 from "../assets/gal-1.jpeg"
+import gal2 from "../assets/gal-2.jpeg"
+import gal3 from "../assets/gal-3.jpeg"
+import gal4 from "../assets/gal-4.jpeg"
+import gal5 from "../assets/gal-5.jpeg"
+
 
 //HOME PAGE
 export const swiperContent = [
@@ -63,6 +69,9 @@ export const stats = [
         value:"50+"
     }
 ]
+
+
+export const swiperGallery = [gal1, gal2, gal3, gal4, gal5]
 
 
 //ABOUT US PAGE

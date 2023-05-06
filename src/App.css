@@ -1,4 +1,4 @@
-
+@import url(./assets/media.css);
 
 :root{
 
@@ -116,7 +116,7 @@ nav li:has(a:hover){opacity: 1 !important;}
   align-items: center;
   gap: 1rem;
   min-height: 100vh;
-  padding-top: 10%;
+  padding-top: 10rem;
   position: relative;
   overflow-x: hidden;
   background-color: black;
@@ -382,7 +382,7 @@ section .container{
 
 .timeline-element{
   color: var(--color-blue);
-  font-size: 2rem !important;
+  font-size: 2rem;
 }
 
 .timeline-element ~ div{
@@ -399,7 +399,7 @@ section .container{
   padding: 4rem 0;
   width: 100%;
 }
-.section4 .swiper-wrapper{padding: 2rem 0 5rem;}
+.section4 .swiper-wrapper{padding: 2rem 0 5rem; align-items: center;}
 
 .section4 .slider-image{
   width: 4rem;
@@ -1137,6 +1137,8 @@ input::placeholder{
 }
 
 
+
+
 /* Science of Dreams */
 
 .profile_initial{
@@ -1368,6 +1370,63 @@ img.empty_gallery{
 }
 
 
+.contact__page{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__page p{
+  color: gray;
+  width: 50%;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+
+.contact__page form{
+  width: 35rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.contact__page form input,
+.contact__page form textarea{
+  padding: .75rem;
+  font-weight: 400 !important;
+  font-size: 1.25rem;
+}
+
+.submit_contact--us{
+  background-color: var(--color-blue);
+  margin-top: 2.5rem;
+  transition: all ease-in-out 500ms;
+  cursor: pointer;
+  border: none;
+}
+
+.submit_contact--us:hover{
+  background-color: var(--color-pink);
+}
+
+.success{
+  background-color: rgba(0, 128, 0, 0.254);
+  padding: .5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.failure{
+  background-color: rgba(255, 0, 0, 0.238);
+  padding: .5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
 
 
 
@@ -1434,6 +1493,8 @@ footer{
     transform: translateY(0%);
   }
 }
+
+
 
 
 

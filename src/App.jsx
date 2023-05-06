@@ -8,6 +8,7 @@ import "./assets/basic.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import UniqueBlog from './pages/UniqueBlog'
+import Contact from './pages/Contact'
 // import AboutUs from './pages/AboutUs'
 // import Blog from './pages/Blog'
 // import Login from './pages/Login'
@@ -30,7 +31,7 @@ function App() {
 
       <React.Suspense fallback={
           <div className='w-screen h-screen flex justify-center items-center'>
-            <div className='loading'></div>
+            <div className='loader'></div>
           </div>
         } 
       >
@@ -39,6 +40,7 @@ function App() {
                 <Route path="/" element={<Home/>} />
                 <Route path="/about" element={<AboutUs/>} />
                 <Route path="/blog" element={<Blog/>} />
+                <Route path="/contact" element={<Contact/>} />
                 <Route path="/blog/:id" element={<UniqueBlog/>} />
                 <Route path="/login" element={<Login/>} />
                 <Route path="/app" element={<MainApp/>} />

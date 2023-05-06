@@ -12,7 +12,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-import { swiperContent, stats } from '../pages/content';
+import { swiperContent, stats, swiperGallery } from '../pages/content';
 
 function Main(props) {
     const navigate = useNavigate();
@@ -255,6 +255,17 @@ Icon: A crystal ball over a dream cloud
                         dynamicBullets: true,
                     }}
                     navigation={true} modules={[Navigation, Pagination]}
+                    breakpoints={{
+                        0: {
+                          slidesPerView: 1,
+                        },
+                        768: {
+                          slidesPerView: 2,
+                        },
+                        1180: {
+                            slidesPerView: 3,
+                          },
+                      }}
                     >
 
                     {swiperContent.map((testimonial)=>{
@@ -337,6 +348,7 @@ Icon: A crystal ball over a dream cloud
                         <Swiper
                             spaceBetween={50}
                             slidesPerView={1}
+                            loop={true}
                             pagination={{
                                 dynamicBullets: true,
                             }}
@@ -347,11 +359,11 @@ Icon: A crystal ball over a dream cloud
                               }}
                             >
 
-                            {swiperContent.map((testimonial)=>{
+                            {swiperGallery.map((item)=>{
                                 return (
                                     <SwiperSlide data-aos="flip-up" data-aos-duration="1000">
-                                        <img src={solution} alt="" width="75%" height="75%" class="cover rounded-small"/>
-                                        <img src={solution} alt="" width="75%" height="75%" class="cover shadow-1 rounded-md"/>
+                                        <img src={item} alt="" width="75%" height="75%" class="cover rounded-small"/>
+                                        <img src={item} alt="" width="75%" height="75%" class="cover shadow-1 rounded-md"/>
 
                                     </SwiperSlide>
                                 )

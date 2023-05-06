@@ -25,11 +25,11 @@ function Footer(props) {
                     <li>
                         <a onClick={()=>navigate("/blog")}>Blog</a>
                     </li>
-                    <li>
+                    {/* <li>
                         <a href="">Services</a>
-                    </li>
+                    </li> */}
                     <li>
-                        <a href="">Contact</a>
+                        <a onClick={()=>navigate("/contact")}>Contact</a>
                     </li>
                     
                 </ul>
