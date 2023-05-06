@@ -2,8 +2,8 @@
 const API_URL = "http://localhost:8000/";
 
 export const login = (data) => {
-  //fetch
-  return fetch(API_URL + "accounts/login", {
+
+  return fetch(API_URL + "accounts/login/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -12,7 +12,11 @@ export const login = (data) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      return data;
+        //check data has key
+        if (data.hasOwnProperty("key")) {
+            localStorage.setItem("token", data.key);
+            return { status: "success" };
+        }
     });
 };
 
