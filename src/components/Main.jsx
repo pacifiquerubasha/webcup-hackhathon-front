@@ -29,7 +29,7 @@ function Main(props) {
              in your dreams and gain valuable insights about what's to come.
             </p>
             <div className="cta">
-                <button className="main__btn" onClick={()=>navigate("/about")}>
+                <button className="main__btn" onClick={()=>navigate("/login")}>
                   <span>Try our App</span>  
                 </button>
             </div>
@@ -375,7 +375,7 @@ Icon: A crystal ball over a dream cloud
                  to personalized dream analysis and premonitory predictions.
                 </p>
 
-                <button onClick={()=>navigate("/predictor")}>
+                <button onClick={()=>navigate("/login")}>
                     <span>Sign Up Now</span>
                 </button>
             </div>

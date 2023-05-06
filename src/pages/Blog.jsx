@@ -1,28 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import blogImage from "../assets/about-hero.jpg"
+import { dreamArticles } from './content';
+import { useAutoAnimate } from '@formkit/auto-animate/react';
 
 function Blog(props) {
+
+    const [animationParent] = useAutoAnimate();
+
+    const [currentFilter, setCurrentFilter] = useState("All");
+    const articleCategories = Array.from(new Set(dreamArticles.map((article)=>article.category)))
 
     const filters = [
         {
             id:1,
             name:"All",
         },
-        {
-            id:2,
-            name:"Category1",
-        },
-        {
-            id:3,
-            name:"Category2",
-        },
-        {
-            id:4,
-            name:"Category3",
+        ...articleCategories.map((article, key)=>{
+            return {
+                id:key+2,
+                name:article
+            }
+            
+        })
+    ];      
+
+    const [filteredDreams, setFilteredDreams] = useState(dreamArticles);
+
+
+    const handleFilterArticles = (filter)=>{
+        setCurrentFilter(filter.name);
+        const tempDreams = dreamArticles.filter((dream)=>dream.category.includes(filter.name));
+        if(filter.name === "All"){
+            setFilteredDreams(dreamArticles);
         }
-    ]
+
+        else setFilteredDreams(tempDreams)
+
+    }
+
+
+
 
 
     return (
@@ -44,7 +63,7 @@ function Blog(props) {
                         <div className="filters flex justify-center w-full">
                             {filters.map((filter, i)=>{
                                 return (
-                                    <span key={filter.id}>
+                                    <span key={filter.id} className={`${currentFilter === filter.name && "selected-filter"}`} onClick={()=>handleFilterArticles(filter)}>
                                         {filter.name}
                                     </span>
                                 )
@@ -54,31 +73,48 @@ function Blog(props) {
                         </div>
 
                         <div className="articles-list flex">
-                            <div className="list-left">
-                                <div className="article flex flex-col">
-                                    <img src={blogImage} alt="" />
+                            <div ref={animationParent} className="list-left">
 
-                                    <div className='article-content flex flex-col'>
-                                        <div className='author'>
-                                            by&nbsp; 
-                                            <span>Emmanuel Murairi</span>
+                                {filteredDreams.map((article, i)=>{
+                                    return (
+                                        <div className="article flex flex-col">
+                                            <img src={blogImage} alt="" />
+
+                                            <div className='article-content flex flex-col'>
+                                                <div className='author'>
+                                                    by&nbsp; 
+                                                    <span>{article.author}</span>
+                                                </div>
+                                                <h3 className='text-gradient'>
+                                                    {article.title}
+                                                </h3>
+                                                <p>
+                                                {article.content}
+                                                </p>
+                                                <div className="separator"></div>
+                                                <span>{article.date}</span>
+                                            </div>
                                         </div>
-                                        <h3 className='text-gradient'>
-                                            Article Title
-                                        </h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                            Sunt obcaecati saepe cum asperiores blanditiis harum non
-                                            explicabo distinctio molestias ut suscipit excepturi iure
-                                            unde id ratione, minus iste aspernatur quam.
-                                        </p>
-                                        <div className="separator"></div>
-                                        <span>November 25th, 2023</span>
-                                    </div>
-                                </div>
+                                    )
+                                })
+                                    
+                                }
 
                             </div>
-                            <div className="list-right">
+                            <div className="list-right flex flex-col">
+                                <h3>Latest Articles</h3>
+                                <div className="recent__articles flex flex-col">
+                                    <div className="recent-article flex items-center">
+                                        <img src={blogImage} alt="" />
+                                        <div>
+                                            <h5>Emmanuel Murairi</h5>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, reiciendis!
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
 
                             </div>
                         </div>
