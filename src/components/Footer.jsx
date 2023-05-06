@@ -1,7 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Footer(props) {
-
+    const navigate = useNavigate();
     const scrollToTop = ()=>{
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -19,7 +20,10 @@ function Footer(props) {
 
                 <ul className='flex'>
                     <li>
-                        <a href="">About Us</a>
+                        <a onClick={()=>navigate("/about")}>About Us</a>
+                    </li>
+                    <li>
+                        <a onClick={()=>navigate("/blog")}>Blog</a>
                     </li>
                     <li>
                         <a href="">Services</a>

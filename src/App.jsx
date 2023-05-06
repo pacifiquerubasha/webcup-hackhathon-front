@@ -8,6 +8,7 @@ import "./assets/basic.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import AboutUs from './pages/AboutUs'
+import Blog from './pages/Blog'
 
 function App() {
   useEffect(() => {
@@ -19,6 +20,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home/>} />
               <Route path="/about" element={<AboutUs/>} />
+              <Route path="/blog" element={<Blog/>} />
+
             </Routes>        
     
         </BrowserRouter>

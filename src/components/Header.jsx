@@ -31,11 +31,11 @@ function Header(props) {
                         <a onClick={()=>navigate("/about")}>About Us</a>
                     </li>
                     <li>
-                        <a href="">Services</a>
+                        <a onClick={()=>navigate("/blog")}>Blog</a>
                     </li>
                     <li>
-                        <a href="">Blog</a>
-                    </li>
+                        <a href="">Services</a>
+                    </li>                    
                     <li>
                         <a href="">Contact</a>
                     </li>
