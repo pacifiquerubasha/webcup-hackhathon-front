@@ -34,6 +34,7 @@ function Blog(props) {
 
   const [filteredDreams, setFilteredDreams] = useState([]);
   const [filteredDreamsTemp, setFilteredDreamsTemp] = useState([]);
+  
   useEffect(() => {
     get_posts().then((data) => {
       console.log(data);
@@ -46,6 +47,7 @@ function Blog(props) {
     const tempDreams = filteredDreams.filter((dream) =>
       dream.category_name.includes(filter.name)
     );
+
     if (filter.name === "All") {
         if (filteredDreamsTemp.length > 0) {
             setFilteredDreams(filteredDreamsTemp);}

@@ -127,7 +127,7 @@ export const team = [
         name:"Emmanuel Murairi",
         role:"Full Stack Developer",
         desc:"Responsible for developping the backend, Frontend and Devops",
-        img:member,
+        img:emmastro,
         linkedin:"https://www.linkedin.com/in/emmanuel-murairi/",
         github:"https://github.com/emmastro",
         twitter:"https://twitter.com/emmamurairi",
