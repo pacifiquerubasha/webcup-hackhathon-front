@@ -568,6 +568,10 @@ h1 {
         z-index: 999 !important;
     }
 
+    main{
+        overflow-x: hidden !important;
+    }
+
 
 
 }
