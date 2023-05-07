@@ -36,7 +36,7 @@ function Contact(props) {
     <>
       <Header />
 
-      <div className="contact__page">
+      <div className="contact__page" data-aos="zoom-in" data-aos-duration="100">
         <h1 className="text-gradient">Contact Us</h1>
         <p>
         Get in Touch with Us and Let's Make Your Dreams a Reality!

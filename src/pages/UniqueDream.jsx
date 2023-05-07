@@ -35,7 +35,7 @@ function UniqueDream(props) {
         </div>
       ) : (
         <div className="unique__dream">
-          <div className="container">
+          <div className="container" data-aos="zoom-in" data-aos-duration="100">
             <p className="dream__intro">
               As I drifted off to sleep on {dream.dream_date}, little did I know
               that my dreams would take me on a journey that felt like hours.

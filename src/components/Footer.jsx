@@ -7,7 +7,7 @@ function Footer(props) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     return (
-        <footer className='text-center py-2 text-gray'>
+        <footer className='text-center py-2 text-gray' data-aos="zoom-in" data-aos-duration="100">
 
             <div className="footer-top w-4/5 mx-auto flex">
                 <a href="/" className="logo"><span>D</span>omnasty</a>

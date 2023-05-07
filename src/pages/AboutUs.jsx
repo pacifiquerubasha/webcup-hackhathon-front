@@ -146,7 +146,7 @@ function AboutUs(props) {
                 </section>    
                 
                 <section className="call">
-                    <div className="container flex p-2">
+                    <div className="container flex p-2" data-aos="zoom-in" data-aos-duration="100">
                         <img src={ladyVR} alt="" />
                         <div>
                             <h5>Join Our Movement and Experience the Power of Our App</h5>

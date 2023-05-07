@@ -42,7 +42,7 @@ function DreamScience(props) {
     <>
       <Header isUser={true} />
 
-      <div className="dream_science">
+      <div className="dream_science" data-aos="zoom-in" data-aos-duration="100">
         <div className="container">
           {!isDreamResults ? (
             <>

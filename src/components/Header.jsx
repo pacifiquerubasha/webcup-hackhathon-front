@@ -22,7 +22,7 @@ function Header({isUser}) {
       }, []);
 
     return (
-        <header className={`${isHeaderFixed ? "headerFixed" : ""}`}>
+        <header className={`${isHeaderFixed ? "headerFixed" : ""}`} data-aos="zoom-in" data-aos-duration="100">
             <a href="/" className="logo"><span>D</span>omnasty</a>
 
             <nav>
