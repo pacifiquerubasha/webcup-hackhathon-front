@@ -273,6 +273,10 @@ h1 {
         align-items: flex-start !important;
     }
 
+    .section-virtual h1{
+        font-size: 2.5rem;
+    }
+
     
     
 }
@@ -438,6 +442,9 @@ h1 {
         justify-content: center;
     }
 
+    .section-virtual .container p{
+        width: 100% !important;
+    }
 
 
 
@@ -541,6 +548,10 @@ h1 {
 
     .logo{
         font-size: 2.25rem !important;
+    }
+
+    .section-virtual h1{
+        font-size: 2rem !important;
     }
 
 

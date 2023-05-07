@@ -515,7 +515,7 @@ section .container{
   width: 15.5rem;
   height: 4rem;
   top: 0;
-  left: -1rem;
+  left: 0;
   position: absolute;
   z-index: -1;
   border-radius: 5px;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import hero from "../assets/hero-il.png"
-import sec1 from '../assets/sect-1.jpeg';
+import sec1 from '../assets/sect-1.png';
 import { useNavigate } from 'react-router-dom';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 

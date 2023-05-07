@@ -8,7 +8,7 @@ import story2 from "../assets/story-2.png";
 import story3 from "../assets/story-3.png";
 import story4 from "../assets/story-4.png";
 import mission from "../assets/mission.png"
-import ladyVR from "../assets/lady-vR.jpeg";
+import ladyVR from "../assets/lady-vR.png";
 import { useNavigate } from 'react-router-dom';
 
 
