@@ -1,14 +1,15 @@
 import bulb from "../assets/bulb.jpg";
 import member from "../assets/about-hero.png";
-import gal1 from "../assets/gal-1.jpeg"
-import gal2 from "../assets/gal-2.jpeg"
-import gal3 from "../assets/gal-3.jpeg"
-import gal4 from "../assets/gal-4.jpeg"
-import gal5 from "../assets/gal-5.jpeg"
-import pk from "../assets/pk.jpeg"
-import abdu from "../assets/abdu.jpeg"
-import aksha from "../assets/aksha.jpeg"
+import gal1 from "../assets/gal-1.png"
+import gal2 from "../assets/gal-2.png"
+import gal3 from "../assets/gal-3.png"
+import gal4 from "../assets/gal-4.png"
+import gal5 from "../assets/gal-5.png"
+import pk from "../assets/pk.png"
+import abdu from "../assets/abdu.png"
+import aksha from "../assets/aksha.png"
 import emmastro from "../assets/emmastro.jpg"
+
 
 //HOME PAGE
 export const swiperContent = [
