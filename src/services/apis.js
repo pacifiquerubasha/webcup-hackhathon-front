@@ -1,5 +1,5 @@
-//const API_URL = "https://dominantdynast.maurice.webcup.hodi.host/api/";
-const API_URL = "http://localhost:8000/";
+const API_URL = "https://dominantdynast.maurice.webcup.hodi.host/api/";
+//const API_URL = "http://localhost:8000/";
 
 export const login = (data) => {
   return fetch(API_URL + "accounts/login/", {
