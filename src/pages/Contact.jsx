@@ -34,9 +34,7 @@ function Contact(props) {
       <div className="contact__page">
         <h1 className="text-gradient">Contact Us</h1>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui sunt at
-          accusamus cupiditate cumque exercitationem, animi doloremque itaque
-          harum sit?
+        Get in Touch with Us and Let's Make Your Dreams a Reality!
         </p>
 
         {isLoading && <div className="loader"></div>}

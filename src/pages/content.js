@@ -5,7 +5,10 @@ import gal2 from "../assets/gal-2.jpeg"
 import gal3 from "../assets/gal-3.jpeg"
 import gal4 from "../assets/gal-4.jpeg"
 import gal5 from "../assets/gal-5.jpeg"
-
+import pk from "../assets/pk.jpeg"
+import abdu from "../assets/abdu.jpeg"
+import aksha from "../assets/aksha.jpeg"
+import emmastro from "../assets/emmastro.jpg"
 
 //HOME PAGE
 export const swiperContent = [
@@ -82,28 +85,49 @@ export const values = [
         subtitle:"We care deeply about our clients and their success. We prioritize their needs above all else."
     },
     {
-        icon:"fas fa-heart",
+        icon:"fas fa-tint",
         title:"Innovation",
         subtitle:"We embrace creativity and innovation in all that we do, constantly striving to improve and find new solutions."
     },
     {
-        icon:"fas fa-heart",
+        icon:"	fas fa-people-carry",
         title:"Agility",
         subtitle:"We are adaptable and quick to respond to changes, ensuring we always meet our clients' needs."
     },
     {
-        icon:"fas fa-heart",
+        icon:"fas fa-handshake-o",
         title:"Integrity",
         subtitle:"We always act with integrity, honesty, and transparency, building trust and strong relationships with our clients."
     },
 ]
 
 export const team = [
+    
     {
-        name:"Pacifique Rubasha",
-        role:"Frontend Developer",
-        desc:"Responsible for developping UIs",
-        img:member,
+        name:"Abdurrahman Gurib",
+        role:"QA Developer",
+        desc:"Ensuring software quality through testing",
+        img:abdu,
+        linkedin:"https://www.linkedin.com/in/pacifique-rubasha-a0a0b0a4/",
+        github:"https://github.com/pacifiquerubasha",
+        twitter:"https://twitter.com/pacifiquerubasha",
+        instagram:"https://www.facebook.com/pacifiquerubasha",
+    },
+    {
+        name:"Akshana Mohun",
+        role:"Cybersecurity Enthusiast",
+        desc:"Protecting digital assets from cybercrime",
+        img:aksha,
+        linkedin:"https://www.linkedin.com/in/pacifique-rubasha-a0a0b0a4/",
+        github:"https://github.com/pacifiquerubasha",
+        twitter:"https://twitter.com/pacifiquerubasha",
+        instagram:"https://www.facebook.com/pacifiquerubasha",
+    },
+    {
+        name:"Emmanuel Murairi",
+        role:"Backend Developer",
+        desc:"Develops and maintains server-side applications.",
+        img:emmastro,
         linkedin:"https://www.linkedin.com/in/pacifique-rubasha-a0a0b0a4/",
         github:"https://github.com/pacifiquerubasha",
         twitter:"https://twitter.com/pacifiquerubasha",
@@ -112,32 +136,12 @@ export const team = [
     {
         name:"Pacifique Rubasha",
         role:"Frontend Developer",
-        desc:"Responsible for developping UIs",
-        img:member,
-        linkedin:"https://www.linkedin.com/in/pacifique-rubasha-a0a0b0a4/",
+        desc:"Responsible for developping client-side applications",
+        img:pk,
+        linkedin:"https://www.linkedin.com/in/pacifique-rubasha-444b90206/",
         github:"https://github.com/pacifiquerubasha",
-        twitter:"https://twitter.com/pacifiquerubasha",
-        instagram:"https://www.facebook.com/pacifiquerubasha",
-    },
-    {
-        name:"Pacifique Rubasha",
-        role:"Frontend Developer",
-        desc:"Responsible for developping UIs",
-        img:member,
-        linkedin:"https://www.linkedin.com/in/pacifique-rubasha-a0a0b0a4/",
-        github:"https://github.com/pacifiquerubasha",
-        twitter:"https://twitter.com/pacifiquerubasha",
-        instagram:"https://www.facebook.com/pacifiquerubasha",
-    },
-    {
-        name:"Pacifique Rubasha",
-        role:"Frontend Developer",
-        desc:"Responsible for developping UIs",
-        img:member,
-        linkedin:"https://www.linkedin.com/in/pacifique-rubasha-a0a0b0a4/",
-        github:"https://github.com/pacifiquerubasha",
-        twitter:"https://twitter.com/pacifiquerubasha",
-        instagram:"https://www.facebook.com/pacifiquerubasha",
+        twitter:"https://twitter.com/Pacifiquekish18",
+        instagram:"https://www.instagram.com/pacifiquerubasha",
     }
 ]
 
@@ -169,7 +173,8 @@ export const dreamArticles = [
         \nRemember, pursuing your dreams is not easy, but it's worth it. Don't let fear and doubt hold you back from living the life you want.
 
         \nThe end.
-        `
+        `,
+        image: gal1
     },
     {
         id:"002",
@@ -190,8 +195,10 @@ export const dreamArticles = [
     
         \n5. Take action: You can have the best plan in the world, but it means nothing without action. Start taking small steps towards your goals today and don't be afraid to make mistakes along the way.
     
-        \nBy following these tips, you can turn your dreams into reality and join the ranks of successful entrepreneurs. Remember, the only thing holding you back is yourself.
-        `
+        \nBy following these tips, you can turn your dreams into reality and join the ranks of successful entrepreneurs. Remember, the only thing holding you back is yourself.,
+        `,
+        image: gal2
+
     },
     
     {
@@ -211,7 +218,8 @@ export const dreamArticles = [
         
         \nVisualization can be a powerful tool for achieving your dreams, but it's important to remember that it's not a magic bullet. You still need to take action and work hard to make your dreams a reality. However, by using visualization to guide your actions and decisions, you can stay focused, motivated, and on track to achieving your dreams.
         
-        \nSo if you're ready to start pursuing your dreams, try incorporating visualization into your daily routine. Spend a few minutes each day visualizing your goals, and use that mental image to guide your actions and decisions. With persistence and hard work, you can turn your dreams into reality.`
+        \nSo if you're ready to start pursuing your dreams, try incorporating visualization into your daily routine. Spend a few minutes each day visualizing your goals, and use that mental image to guide your actions and decisions. With persistence and hard work, you can turn your dreams into reality.`,
+        image: gal3
     },
     {
         id: "004",
@@ -238,7 +246,10 @@ export const dreamArticles = [
             Pursuing your dreams while maintaining your career requires persistence and determination. There will be setbacks and challenges along the way, but don't let them discourage you. Keep pushing forward and believe in yourself and your abilities.
     
             \nIn conclusion, pursuing your dreams while maintaining your career is possible with the right mindset, strategies, and support. Remember to find a job that aligns with your passions, set realistic goals, create a schedule and stick to it, surround yourself with supportive people, and most importantly, don't give up. With these tips, you can successfully pursue your dreams while also building a successful career.
-        `
+
+        `,
+        image: gal4
+
     },
     
     {
@@ -258,7 +269,9 @@ export const dreamArticles = [
     
             \nFinally, building a successful business requires hard work and perseverance. There will be obstacles and setbacks along the way, but it's important to stay focused on your goals and keep pushing forward. Don't be afraid to seek out advice and support from other entrepreneurs or mentors who have been through similar experiences.
     
-            \nIn conclusion, building a successful business from the ground up is a challenging but rewarding journey. By having a clear vision and mission, being adaptable and willing to pivot, building a strong team, and persevering through obstacles, aspiring entrepreneurs can increase their chances of success.`
+            \nIn conclusion, building a successful business from the ground up is a challenging but rewarding journey. By having a clear vision and mission, being adaptable and willing to pivot, building a strong team, and persevering through obstacles, aspiring entrepreneurs can increase their chances of success.`,
+        image: gal5
+
     }
     
   ];

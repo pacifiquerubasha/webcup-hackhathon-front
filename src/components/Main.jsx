@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import bulb from "../assets/bulb.jpg"
 import solution from "../assets/solution.jpg"
 import hero from "../assets/hero-il.png"
@@ -15,8 +15,12 @@ import 'swiper/css/scrollbar';
 
 import { swiperContent, stats, swiperGallery } from '../pages/content';
 
+import { useAutoAnimate } from '@formkit/auto-animate/react';
 function Main(props) {
     const navigate = useNavigate();
+    const [animationParent] = useAutoAnimate();
+
+    const [isChatOpen, setIsChatOpen] = useState(false);
 
     return (
         <main>
@@ -393,6 +397,18 @@ Icon: A crystal ball over a dream cloud
                 </button>
             </div>
         </section>
+
+        <div ref={animationParent} className='chat-container'>
+
+            {isChatOpen &&
+                <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/43dc714d-6bc9-4601-88ce-6dc183ed7e72">
+                </iframe>
+            }
+            
+             <div className="chat-icon" onClick={()=>setIsChatOpen(!isChatOpen)}>
+                <i className='fas fa-comment-dots text-5xl'></i>             
+             </div>
+        </div>
 
 
     

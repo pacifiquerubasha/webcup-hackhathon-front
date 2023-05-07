@@ -12,7 +12,7 @@ function UniqueBlog(props) {
     const [blog, setBlog] = useState(null);
     
     useEffect(()=>{
-        const currentBlog = dreamArticles.find((b) => b.id === id);
+        const currentBlog = dreamArticles.find((blog) => blog.id === id);
         setBlog(currentBlog);        
     }, [])
     

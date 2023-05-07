@@ -6,11 +6,21 @@ import Modal from "react-modal"
 import bulb from "../assets/bulb.jpg"
 import member from "../assets/about-hero.jpg"
 import { values, team } from './content';
+import story1 from "../assets/story-1.png";
+import story2 from "../assets/story-2.png";
+import story3 from "../assets/story-3.png";
+import story4 from "../assets/story-4.png";
+import mission from "../assets/mission.png"
+import ladyVR from "../assets/lady-vR.jpeg";
+import { useNavigate } from 'react-router-dom';
+
 
 function AboutUs(props) {
     
     
     const [animationParent] = useAutoAnimate();
+
+    const navigate = useNavigate();
 
     return (
         <>
@@ -31,10 +41,10 @@ function AboutUs(props) {
                 <section className='about'>
                     <div className="container flex" data-aos="zoom-in" data-aos-duration="1000">
                         <div className='about-il'>
-                            <img src={bulb} alt="" />
-                            <img src={bulb} alt="" />
-                            <img src={bulb} alt="" />
-                            <img src={bulb} alt="" />
+                            <img src={story1} alt="" />
+                            <img src={story2} alt="" />
+                            <img src={story3} alt="" />
+                            <img src={story4} alt="" />
                         </div>
 
                         <div className="about-left">
@@ -63,7 +73,7 @@ function AboutUs(props) {
                 <section className="drive">
                     <div className="container flex">
                         <div className="drive__left">
-                            <img src={member} alt="" />
+                            <img src={mission} alt="" />
                         </div>
 
                         <div className="drive__right">
@@ -137,13 +147,13 @@ function AboutUs(props) {
                 
                 <section className="call">
                     <div className="container flex p-2">
-                        <img src={member} alt="" />
+                        <img src={ladyVR} alt="" />
                         <div>
                             <h5>Join Our Movement and Experience the Power of Our App</h5>
-                            <button className='try'>
+                            <button className='try' onClick={()=>navigate("/contact")}>
                                  <span>Join Our Team</span> 
                             </button>
-                            <button className='join'>                                
+                            <button className='join' onClick={()=>navigate("/login")}>                                
                                 <span>Try Our App</span>
                             </button>
                         </div>
@@ -171,12 +181,12 @@ function AboutUs(props) {
                                         <div className="content">
                                             <h5>{member.name}</h5>
                                             <span>{member.role}</span>
-                                            <p>{member.desc}</p>
+                                            <p className='text-center'>{member.desc}</p>
                                             <div className='flex justify-around handles'>
-                                                <a href={member.github}><i className='fab fa-github'></i></a>
-                                                <a href={member.twitter}><i className='fab fa-twitter'></i></a>
-                                                <a href={member.linkedin}><i className='fab fa-linkedin'></i></a>
-                                                <a href={member.instagram}><i className='fab fa-instagram'></i></a>
+                                                <a href={member.github} target="_blank"><i className='fab fa-github'></i></a>
+                                                <a href={member.twitter} target="_blank"><i className='fab fa-twitter'></i></a>
+                                                <a href={member.linkedin} target="_blank"><i className='fab fa-linkedin'></i></a>
+                                                <a href={member.instagram} target="_blank"><i className='fab fa-instagram'></i></a>
 
                                             </div>
                                         </div>

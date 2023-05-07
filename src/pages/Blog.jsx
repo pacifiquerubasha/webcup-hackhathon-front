@@ -88,7 +88,7 @@ function Blog(props) {
                                 {filteredDreams.map((article, i)=>{
                                     return (
                                         <div onClick={()=>navigate(`/blog/${article.id}`)} className="article flex flex-col">
-                                            <img src={blogImage} alt="" />
+                                            <img src={article.image} alt="" />
 
                                             <div className='article-content flex flex-col'>
                                                 <div className='author'>
@@ -119,7 +119,7 @@ function Blog(props) {
                                         <div>
                                             <h5>Emmanuel Murairi</h5>
                                             <p>
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, reiciendis!
+                                                I awoke with a sense of wonder and a vivid dream still fresh in my mind. Little did I know that this dream was the beginning of a remarkable journey, one that would lead me to uncover hidden truths and unexpected insights about my future.
                                             </p>
                                         </div>
                                     </div>
