@@ -58,3 +58,22 @@ export const save_dream = (data) => {
     body: JSON.stringify(data),
   }).then((response) => response.json());
 };
+
+export const contact = (data) => {
+    return fetch(API_URL + "contact/", {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+    }).then((response) => response.json());
+}
+
+export const get_posts = () => {
+    return fetch(API_URL + "post/", {
+        method: "GET",
+        headers: {
+        "Content-Type": "application/json",
+        },
+    }).then((response) => response.json());
+    }
