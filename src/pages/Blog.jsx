@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAutoAnimate } from '@formkit/auto-animate/react';
+
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import blogImage from "../assets/about-hero.jpg"
 import { dreamArticles } from './content';
-import { useAutoAnimate } from '@formkit/auto-animate/react';
-import { useNavigate } from 'react-router-dom';
+import { get_posts } from '../services/apis';
 
 function Blog(props) {
 
@@ -30,7 +32,14 @@ function Blog(props) {
 
     const [filteredDreams, setFilteredDreams] = useState(dreamArticles);
 
-
+    useEffect(()=>{
+        
+        get_posts().then((data)=>{
+            console.log(data);
+            //setFilteredDreams(dreamArticles);
+        })
+        
+    },[])
     const handleFilterArticles = (filter)=>{
         setCurrentFilter(filter.name);
         const tempDreams = dreamArticles.filter((dream)=>dream.category.includes(filter.name));
