@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
-
+import { useNavigate } from "react-router-dom";
 import { save_dream } from "../services/apis";
 
 function DreamScience(props) {
@@ -28,6 +28,15 @@ function DreamScience(props) {
       setIsDreamResults(true);
     });
   };
+
+  const navigate = useNavigate();
+  useEffect(()=>{
+    const hasToken = localStorage.getItem("token");
+    if(!hasToken){
+        navigate("/login")
+    }
+
+}, [])
 
   return (
     <>
@@ -97,7 +106,7 @@ function DreamScience(props) {
           ) : (
             <>
               {isLoading ? (
-                <div class="loader"></div>
+                <div className="loader"></div>
               ) : (
                 <>
                   <h2 className="dream_results--title text-gradient">

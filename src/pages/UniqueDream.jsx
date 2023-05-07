@@ -1,10 +1,20 @@
 import React, { useState } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import { useNavigate } from 'react-router-dom';
 
 function UniqueDream(props) {
 
     const [isLoading, setIsLoading] = useState(false);
+    const navigate = useNavigate();
+
+    useEffect(()=>{
+        const hasToken = localStorage.getItem("token");
+        if(!hasToken){
+            navigate("/login")
+        }
+
+    }, [])
 
     return (
         <>

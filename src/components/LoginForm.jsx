@@ -38,6 +38,14 @@ function LoginForm({ setIsLogin }) {
 
   const [isError, setIsError] = useState(false);
 
+  useEffect(()=>{
+    const hasToken = localStorage.getItem("token");
+    if(hasToken){
+        navigate("/app")
+    }
+
+}, [])
+
   return (
     <div ref={animationParent} className="login-form">
       <form onSubmit={handleSubmit}>

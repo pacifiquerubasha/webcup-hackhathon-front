@@ -18,9 +18,18 @@ function MainApp(props) {
     });
   }, []);
 
+  const navigate = useNavigate();
   const handleShowUniqueDreamDetails = (id)=>{
-    navigate(`/app/dream/${id}`);
-}
+        navigate(`/app/dream/${id}`);
+    }
+
+    useEffect(()=>{
+        const hasToken = localStorage.getItem("token");
+        if(!hasToken){
+            navigate("/login")
+        }
+
+    }, [])
 
   return (
     <>

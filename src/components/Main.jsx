@@ -2,6 +2,7 @@ import React from 'react';
 import bulb from "../assets/bulb.jpg"
 import solution from "../assets/solution.jpg"
 import hero from "../assets/hero-il.png"
+import sec1 from '../assets/sect-1.jpeg';
 import { useNavigate } from 'react-router-dom';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 
@@ -92,7 +93,7 @@ function Main(props) {
                     </ul>
                 </div>
                 <div className="container-right" data-aos="fade-right" data-aos-duration="1000">
-                    <img src={bulb} alt="" />
+                    <img src={sec1} alt="" />
                 </div>
             </div>
         </section>
@@ -117,7 +118,7 @@ function Main(props) {
 
                 <div className='solutions'>
                     <div className="solution" data-aos="fade-right" data-aos-duration="1000">
-                            <i className="fas fa-ruler"></i>
+                            <i className="fas fa-user"></i>
                             <div>
                                 <span>Personalized Dream Analysis</span>
                                 <p>
@@ -127,7 +128,7 @@ Icon: A magnifying glass over a dream cloud.
                             </div>
                     </div>
                     <div className="solution" data-aos="fade-up" data-aos-duration="2000">
-                            <i className="fas fa-bolt"></i>
+                            <i className="fas fa-book"></i>
                             <div>
                                 <span>Dream Journaling</span>
                                 <p>
@@ -271,19 +272,19 @@ Icon: A crystal ball over a dream cloud
                     {swiperContent.map((testimonial)=>{
                         return (
                             <SwiperSlide data-aos="flip-up" data-aos-duration="1000">
-                                <div class="flex justify-between mx-auto">
-                                    <div class="flex flex-col slider-top">
-                                    <div class="slider-image">
+                                <div className="flex justify-between mx-auto">
+                                    <div className="flex flex-col slider-top">
+                                    <div className="slider-image">
                                         <img src={testimonial.image} alt="Testimonial"/>
                                     </div>
-                                    <div class="flex flex-col">
-                                        <span class="text-lg font-semibold text-xl">{testimonial.name}</span>
-                                        <span class="text-gray font-semibold">{testimonial.address}</span>
+                                    <div className="flex flex-col">
+                                        <span className="text-lg font-semibold text-xl">{testimonial.name}</span>
+                                        <span className="text-gray font-semibold">{testimonial.address}</span>
                                     </div>
                                     </div>
-                                    <div class="flex items-center text-lg font-semibold">{testimonial.rating}</div>
+                                    <div className="flex items-center text-lg font-semibold">{testimonial.rating}</div>
                                 </div>
-                                <div class="text-md mt-2 text-lg">
+                                <div className="text-md mt-2 text-lg">
                                     {testimonial.testimonial}
                                 </div>
 
@@ -338,12 +339,12 @@ Icon: A crystal ball over a dream cloud
 
         <section>
             <div className="container">
-                <div class="flex w-4/5 mx-auto gap-2 call-container">
-                    <div class="call-left flex flex-col justify-center w-1/2" data-aos="fade-right" data-aos-duration="1000">
-                        <h1 class="text-5xl mb-2">Dream Art Gallery: Surrealism, Fantasy, and Imagination</h1>
+                <div className="flex w-4/5 mx-auto gap-2 call-container">
+                    <div className="call-left flex flex-col justify-center w-1/2" data-aos="fade-right" data-aos-duration="1000">
+                        <h1 className="text-5xl mb-2">Dream Art Gallery: Surrealism, Fantasy, and Imagination</h1>
                         <p>Immerse yourself in the enchanting world of dream-inspired art, featuring the works of talented artists from around the globe.</p>
                     </div>
-                    <div class="call-right w-1/2 flex justify-start relative" data-aos="fade-left" data-aos-duration="1000">
+                    <div className="call-right w-1/2 flex justify-start relative" data-aos="fade-left" data-aos-duration="1000">
                       
                         <Swiper
                             spaceBetween={50}
@@ -362,8 +363,8 @@ Icon: A crystal ball over a dream cloud
                             {swiperGallery.map((item)=>{
                                 return (
                                     <SwiperSlide data-aos="flip-up" data-aos-duration="1000">
-                                        <img src={item} alt="" width="75%" height="75%" class="cover rounded-small"/>
-                                        <img src={item} alt="" width="75%" height="75%" class="cover shadow-1 rounded-md"/>
+                                        <img src={item} alt="" width="75%" height="75%" className="cover rounded-small"/>
+                                        <img src={item} alt="" width="75%" height="75%" className="cover shadow-1 rounded-md"/>
 
                                     </SwiperSlide>
                                 )
