@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import empty from "../assets/empty.png";
+import { useNavigate } from 'react-router-dom';
 import { get_dreams } from "../services/apis";
 
 function MainApp(props) {
@@ -10,13 +11,16 @@ function MainApp(props) {
 
   useEffect(() => {
     get_dreams().then((response) => {
-      console.log("data", response);
       if (response.length === 0) {
         setIsEmptyDreamList(true);
       }
       setDreams(response);
     });
   }, []);
+
+  const handleShowUniqueDreamDetails = (id)=>{
+    navigate(`/app/dream/${id}`);
+}
 
   return (
     <>
@@ -40,7 +44,7 @@ function MainApp(props) {
               <div className="dreams_list flex ">
                 {dreams.map((dream, i) => {
                   return (
-                    <div className="dream flex flex-col">
+                    <div className="dream flex flex-col" onClick={()=>handleShowUniqueDreamDetails}>
                       <div className="dream__date">{dream.dream_date}</div>
                       <div className="dream__duration">
                         {dream.sleep_time} - {dream.wake_time}

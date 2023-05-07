@@ -473,6 +473,7 @@ section .container{
   font-size: 3.5rem;
   margin-bottom: 1rem;
   font-weight: 500;
+  text-align: center;
 }
 
 .section-cta .container p{
@@ -567,6 +568,7 @@ section .container{
 
 .about-hero h1{
   width: 50%;
+  text-align: left;
 }
 
 .about-hero>p{
@@ -833,6 +835,11 @@ section.about .container>div{
   width: 40%;
 }
 
+.blog-hero h1{
+  font-size: 2.5rem;
+  text-align: left;
+}
+
 .blog-hero p{
   margin-top: 2rem;
   font-size: 1.25rem;
@@ -983,7 +990,7 @@ section.about .container>div{
 
 .login-container{
   width: 75%;
-  height: 75%;
+  height: 80%;
   margin: auto;
   background-color: rgba(45, 50, 64, 0.241);
   border-radius: 10px;
@@ -1019,12 +1026,18 @@ section.about .container>div{
   justify-content: flex-start;
 }
 
-.login-container>form{
+.login-container>form,
+.login-container>div{
   width: 50%;
   padding: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.login-container>div>form>div{
+  display: flex;
+  flex-direction: column;
 }
 
 .login-container h3{
@@ -1073,8 +1086,8 @@ input::placeholder{
   position:relative;
 }
 
-.login-form>div i,
-.signup-form>div i{
+.login-form i,
+.signup-form i{
   position: absolute;
   left: 70%;
   top: 50%;
@@ -1113,7 +1126,7 @@ input::placeholder{
   gap: 1rem;
   font-size: 1.25rem;
   color: gray;
-  width: 75%;
+  width: 90%;
 }
 
 .signup-form .more{
@@ -1266,6 +1279,7 @@ img.empty_gallery{
   margin-top: 1rem;
   font-weight: 500;
   color: gray;
+  text-align: center;
 }
 
 .dream_science .container form input,
@@ -1429,6 +1443,38 @@ img.empty_gallery{
 }
 
 
+.unique__dream{
+  padding-top: 10rem;
+
+}
+
+.unique__dream .container{
+  width: 45rem;
+  max-width: 100%;
+  flex-direction: column;
+  color: rgb(181, 181, 181);
+}
+
+.unique__dream h5{
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.dream__intro{
+  font-size: 1.35rem;
+  margin-bottom: 3rem;
+
+}
+.dream__context{
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+
+}
+.dream__assessment{
+  font-size: 1.25rem;
+
+}
 
 
 

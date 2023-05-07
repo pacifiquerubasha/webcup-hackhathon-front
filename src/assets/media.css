@@ -94,8 +94,25 @@ h1 {
   
 
 @media screen and (max-width:1380px){
-    .hero h1{
+    .hero h1, .about-hero h1, .drive .drive__right h1, .dream_science h1{
         font-size: 3rem;
+    }
+
+    .about-hero{
+        background-position: 90% 0% !important;
+    }
+
+    .login-container{
+        height: 90% !important;
+    }
+
+    .login-form input, .signup-form input{
+        width: 100% !important;
+    }
+
+    .login-form i,
+    .signup-form i{
+        left: 90% !important;
     }
 
 }
@@ -128,8 +145,48 @@ h1 {
     .section-cta .container h4{
         font-size: 2.5rem !important;
     }
+
+    .about-hero{
+        height: 75vh !important;
+    }
+
+    section.about .container, .drive .container{
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .drive .drive__left{
+        width: 75% !important;
+    }
+
+    .drive .drive__right{
+        width: 100% !important;
+    }
+
+    .team-bottom{
+        flex-wrap: wrap;
+    }
+
+    .team-bottom .member{
+        width: 40%;
+        margin-bottom: 2.5rem;
+    }
+    
+    .blog-hero p, .blog-hero h1{
+        width: 60% !important;
+    }
+
+    .login-container{
+        width: 90% !important;
+    }
+
+    .login-form .more, .signup-form .more{
+        flex-direction: column !important;
+    }
     
     
+
+
 }
 
 @media screen and (max-width:1024px){
@@ -153,8 +210,70 @@ h1 {
 
     .hero h1{text-align: center;}
     
+    .call .container>img,
+    .call .container>div{
+        width: 80% !important;
+    }
+
+    .about-hero h1, .about-hero p{
+        position: relative;
+        z-index: 2;
+    }
+
+    .about-hero h1, .dream_science h1{font-size: 2rem !important;}
+    .about-hero{position: relative;}
+    .about-hero::after {
+        content: "";
+        position: absolute;
+        left: 5%;
+        width: 55%;
+        height: 60%;
+        background-color: rgba(0, 0, 0, 0.254);
+        z-index: 1;
+
+    }
+
+    .features{
+        flex-wrap: wrap;
+        padding-bottom: 1rem !important;
+    }
+
+    .features .feature{
+        width: 40% !important;
+        margin-bottom: 4rem;
+    }
+
+    .feature:nth-child(2), .feature:nth-child(3){
+        transform: translateY(0%) !important;
+    }
+
+    .articles-list, .articles-list .list-left{
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .articles-list .article{
+        margin-bottom: 2.5rem;
+    }
+
+    .articles-list .list-right{
+        width: 50% !important;
+    }
+
+    .filters{
+        flex-wrap: wrap;
+    }
+
+    .login-container>div, .signup-form{
+        padding: 2rem 1rem !important;
+    }
 
 
+    .unique__dream .container{
+        align-items: flex-start !important;
+    }
+
+    
     
 }
 
@@ -183,6 +302,8 @@ h1 {
     header{
         position: relative;
         padding: 1.5rem 0 !important;
+        position: fixed !important;
+        background-color: black;
     }
 
     .toggle-menu{
@@ -200,14 +321,228 @@ h1 {
         background-color: black;
         height: 100vh;
         flex-direction: column;
-        
+        justify-content: center !important;
+        transform: translateY(-100%);
+        transition: transform 0.5s ease-in-out;
     }
+
+    header:has(.checkbox1:checked) nav{
+        transform: translateY(0%);
+    }
+
+    
 
     header nav ul{
         flex-direction: column;
-        
+        flex: unset;
+        gap: 2rem;
+        margin-bottom: 2rem;
+
+    }
+
+    .hero h1{
+        font-size: 2.5rem;
+    }
+
+    .hero p{font-size: 1.25rem !important;}
+    .drive__right>div{
+        flex-direction: column;
+    }
+
+    .drive__right>div>div{
+        width: 100% !important; 
+        margin-bottom: 2rem;
+    }
+
+    .team-bottom .member{
+        width: 75%;
+    }
+
+    .about-il{
+        flex-wrap: wrap !important;
+    }
+
+    section.about .container>div img{
+        width: 40% !important;
+    }
+
+    .about-hero p, .about-hero h1{
+        width: 85% !important;
+    }
+
+    .about-hero::after {
+        content: "";
+        position: absolute;
+        left: 5%;
+        width: 85%;
+        height: 60%;
+        background-color: rgba(0, 0, 0, 0.54);
+
+    }
+
+    .articles-list .list-left{
+        padding: 0 !important;
+    }
+    .articles-list .article{
+        width: 100% !important;
     }
 
 
+    .blog-hero{position: relative;}
+    .blog-hero::after {
+        content: "";
+        position: absolute;
+        left: 5%;
+        width: 85%;
+        height: 55%;
+        background-color: rgba(0, 0, 0, 0.40);
+        z-index: 1;
+
+    }
+
+    .blog-hero p, .blog-hero h1{
+        width: 85% !important;
+    }
+
+
+    .blog-hero{
+        height: 90vh !important;
+        background-position: 75% !important;
+    }
+
+    .unique__blog--desc{
+        width: 100% !important;
+    }
     
+    .blog-hero p{
+        color: white !important;
+    }
+
+
+    .login-container::after{
+        display: none;
+    }
+
+
+    .login-container>form, .login-container>div{
+        width: 100% !important;
+    }
+
+
+    .login{
+        height: auto !important;
+    }
+
+
+    .dreams_list{
+        justify-content: center;
+    }
+
+
+
+
+    
+
+
+    
+}
+
+
+@media screen and (max-width:498px){
+    .solution{
+        width: 90% !important;
+    }
+    .timeline, .call-container, .section-cta .container p, .footer-top p{
+        width: 100% !important;
+    }
+
+    .stats{
+        flex-wrap: wrap;
+    }
+
+    .stat{
+        width: 50%;
+        margin-bottom: 3rem;
+    }
+
+    .footer-top{
+        padding-top: 2rem !important;
+    }
+
+    .hero>img{
+        margin-top: 5rem;
+    }
+
+    .features .feature{
+        width: 75% !important;
+    }
+
+    .about-info{
+        font-size: 1.25rem !important;
+        line-height: 2rem !important;
+    }
+
+    .drive .drive__left{
+        width: 100% !important;
+    }
+
+    .drive .drive__right h1, .call .container>div h5{
+        font-size: 2rem !important;
+    }
+
+    .try{
+        margin-bottom: 2rem;
+    }
+
+    .blog-hero h1{
+        font-size: 1.75rem !important;
+    }
+    
+    .blog-hero p, .blog__paragraph, .about-hero>p{
+        font-size: 1rem !important;
+    }
+
+    .articles-list .list-left, .articles-list .list-right{
+        width: 100% !important;
+    }
+
+    footer .logo{
+        font-size: 2rem;
+    }
+
+    .scroll-top {
+        width: 3rem !important;
+        height: 3rem !important;
+        font-size: 2rem !important;
+    }
+
+    .about-hero{
+        height: 100vh !important;
+    }
+
+    .about-il{
+        justify-content: space-between;
+    }
+
+    .call .container>img, .call .container>div{
+        width: 90% !important;
+    }
+
+    .call .container>div h5{
+        font-weight: 500 !important;
+    }
+
+    .login-container{
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 0 !important;
+        overflow: auto;
+    }
+
+    .logo{
+        font-size: 2.25rem !important;
+    }
+
+
+
 }
