@@ -559,7 +559,7 @@ section .container{
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background: url(./assets/about-hero.jpg);
+  background: url(./assets/about-hero.png);
   background-size: cover;
   align-items: flex-start;
   justify-content: center;
@@ -1014,7 +1014,7 @@ section.about .container>div{
   left: 0;
   width: 50%;
   height: 100%;
-  background: url(./assets/about-hero.jpg);
+  background: url(./assets/about-hero.png);
   background-size: cover;
   background-position: 100%;
   transition: all ease-in-out 500ms;
@@ -1048,6 +1048,7 @@ section.about .container>div{
 .login-container>div>form>div{
   display: flex;
   flex-direction: column;
+  margin-bottom: 1rem;
 }
 
 .login-container h3{
@@ -1660,3 +1661,13 @@ footer{
   align-items: flex-end;
 }
 
+.section-virtual .container{
+  background-color: rgba(128, 128, 128, 0.504);
+  border-radius: 10px;
+  padding: 2rem 1rem;
+}
+
+
+.section-virtual .container p{
+  width: 60%;
+}

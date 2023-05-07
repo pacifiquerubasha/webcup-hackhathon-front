@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import bulb from "../assets/bulb.jpg"
-import solution from "../assets/solution.jpg"
 import hero from "../assets/hero-il.png"
 import sec1 from '../assets/sect-1.jpeg';
 import { useNavigate } from 'react-router-dom';
@@ -234,6 +232,22 @@ Icon: A crystal ball over a dream cloud
             </div>
 
         </section>  
+
+        <div className="section-virtual">
+            <div className="container flex flex-col items-center">
+                <h1>Hold on! We have more.</h1>
+                <p className='text-lg mb-3 mt-1 text-center'>
+                    Experience your dreams like never before with our immersive VR demo. 
+                    Take the first step towards making your dreams a reality and start exploring now!
+                </p>
+
+                <a href="https://virtualdream2023.netlify.app/" target="_blank">
+                    <button className='text-lg px-3'>
+                        <span>Try VR</span>
+                    </button>
+                </a>
+            </div>
+        </div>
 
         <section className='section4 '>
             <div className="container flex-col">

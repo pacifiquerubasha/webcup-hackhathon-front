@@ -1,5 +1,5 @@
 import bulb from "../assets/bulb.jpg";
-import member from "../assets/about-hero.jpg";
+import member from "../assets/about-hero.png";
 import gal1 from "../assets/gal-1.jpeg"
 import gal2 from "../assets/gal-2.jpeg"
 import gal3 from "../assets/gal-3.jpeg"
@@ -108,20 +108,20 @@ export const team = [
         role:"QA Developer",
         desc:"Ensuring software quality through testing",
         img:abdu,
-        linkedin:"https://www.linkedin.com/in/pacifique-rubasha-a0a0b0a4/",
-        github:"https://github.com/pacifiquerubasha",
-        twitter:"https://twitter.com/pacifiquerubasha",
-        instagram:"https://www.facebook.com/pacifiquerubasha",
+        linkedin:"https://www.linkedin.com/in/abdurrahman-noor-ul-haqq-gurib-863ab7238/",
+        github:"https://github.com/Abdurrahman-gurib",
+        twitter:"https://twitter.com/abdurrahman.gurib",
+        instagram:"https://instagram.com/noor.gurib?igshid=ZDdkNTZiNTM=",
     },
     {
         name:"Akshana Mohun",
         role:"Cybersecurity Enthusiast",
         desc:"Protecting digital assets from cybercrime",
         img:aksha,
-        linkedin:"https://www.linkedin.com/in/pacifique-rubasha-a0a0b0a4/",
-        github:"https://github.com/pacifiquerubasha",
-        twitter:"https://twitter.com/pacifiquerubasha",
-        instagram:"https://www.facebook.com/pacifiquerubasha",
+        linkedin:"https://www.linkedin.com/in/akshana-mohun-aaa9b8137",
+        github:"https://github.com/Akshana456",
+        twitter:"https://twitter.com/akshana.mohun",
+        instagram:"https://instagram.com/akshana.mohun?igshid=NTc4MTIwNjQ2YQ==",
     },
     {
         name:"Emmanuel Murairi",

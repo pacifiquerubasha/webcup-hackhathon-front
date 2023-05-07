@@ -4,13 +4,15 @@ import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import blogImage from "../assets/about-hero.jpg";
+import blogImage from "../assets/about-hero.png";
 import { dreamArticles } from "./content";
 import { get_posts } from "../services/apis";
 
 function Blog(props) {
   const navigate = useNavigate();
   const [animationParent] = useAutoAnimate();
+  const [iframeAnimate] = useAutoAnimate();
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
   const [currentFilter, setCurrentFilter] = useState("All");
   const articleCategories = Array.from(
@@ -136,6 +138,18 @@ function Blog(props) {
           </div>
         </section>
       </div>
+
+      <div ref={iframeAnimate} className='chat-container'>
+
+            {isChatOpen &&
+                <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/43dc714d-6bc9-4601-88ce-6dc183ed7e72">
+                </iframe>
+            }
+            
+             <div className="chat-icon" onClick={()=>setIsChatOpen(!isChatOpen)}>
+                <i className='fas fa-comment-dots text-5xl'></i>             
+             </div>
+        </div>
 
       <Footer />
     </>

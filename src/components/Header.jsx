@@ -68,9 +68,9 @@ function Header({isUser}) {
 
                     :
                     <>
-                        <a href=""><i className="fab fa-github"></i></a>
-                        <a href=""><i className="fab fa-twitter"></i></a>
-                        <a href=""><i className="fab fa-discord"></i></a>
+                        <a href="https://github.com/pacifiquerubasha/webcup-hackhathon-front" target="_blank"><i className="fab fa-github"></i></a>
+                        <a href="https://twitter.com/emmamurairi" target="_blank"><i className="fab fa-twitter"></i></a>
+                        <a href="https://discordapp.com/users/Cyrrus#6881" target="_blank"><i className="fab fa-discord"></i></a>
                     
                     </>
                     }

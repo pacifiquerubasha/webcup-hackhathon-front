@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import blogImage from "../assets/about-hero.jpg";
+import blogImage from "../assets/about-hero.png";
 
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { useParams } from "react-router-dom";
@@ -10,7 +10,8 @@ import { get_post } from "../services/apis";
 function UniqueBlog(props) {
   const { id } = useParams();
   const [blog, setBlog] = useState(null);
-    
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [animationParent] = useAutoAnimate();
     
   useEffect(() => {
     get_post(id).then((currentBlog) => {
@@ -60,6 +61,18 @@ function UniqueBlog(props) {
           </div>
         </section>
       </div>
+
+      <div ref={iframeAnimate} className='chat-container'>
+
+            {isChatOpen &&
+                <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/43dc714d-6bc9-4601-88ce-6dc183ed7e72">
+                </iframe>
+            }
+            
+             <div className="chat-icon" onClick={()=>setIsChatOpen(!isChatOpen)}>
+                <i className='fas fa-comment-dots text-5xl'></i>             
+             </div>
+        </div>
 
       <Footer />
     </>

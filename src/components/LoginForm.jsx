@@ -52,7 +52,7 @@ function LoginForm({ setIsLogin }) {
         <h3 className="text-gradient">Login</h3>
         {isError && <div className="message">An error occurred</div>}
         <div>
-          <label htmlFor="username">Username</label>
+          <label htmlFor="username">Email</label>
           <input
             type="email"
             name="email"
