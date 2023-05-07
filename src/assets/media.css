@@ -563,6 +563,11 @@ h1 {
         width: 80% !important;
     }
 
+    .chat-container{
+        right: 2rem !important;
+        z-index: 999 !important;
+    }
+
 
 
 }
