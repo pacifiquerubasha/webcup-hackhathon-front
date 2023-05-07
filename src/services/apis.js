@@ -69,6 +69,17 @@ export const contact = (data) => {
     }).then((response) => response.json());
 }
 
+export const save_post = (data) => {
+    return fetch(API_URL + "post/", {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json",
+        Authorization: `Token ${localStorage.getItem("token")}`,
+        },
+        body: JSON.stringify(data),
+    }).then((response) => response.json());
+}
+
 export const get_posts = () => {
     return fetch(API_URL + "post/", {
         method: "GET",

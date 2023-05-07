@@ -7,7 +7,7 @@ function Contact(props) {
   const [isMessage, setIsMessage] = useState(false);
   const [messageType, setMessageType] = useState("success");
   const [isLoading, setIsLoading] = useState(false);
-
+  const [inputs, setInputs] = useState({});
   const handleChange = (event) => {
     console.log(event.target.name);
     const name = event.target.name;
