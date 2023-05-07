@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import empty from "../assets/empty.png";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { get_dreams } from "../services/apis";
 
 function MainApp(props) {
@@ -19,17 +19,16 @@ function MainApp(props) {
   }, []);
 
   const navigate = useNavigate();
-  const handleShowUniqueDreamDetails = (id)=>{
-        navigate(`/app/dream/${id}`);
+  const handleShowUniqueDreamDetails = (id) => {
+    navigate(`/app/dream/${id}`);
+  };
+
+  useEffect(() => {
+    const hasToken = localStorage.getItem("token");
+    if (!hasToken) {
+      navigate("/login");
     }
-
-    useEffect(()=>{
-        const hasToken = localStorage.getItem("token");
-        if(!hasToken){
-            navigate("/login")
-        }
-
-    }, [])
+  }, []);
 
   return (
     <>
@@ -53,14 +52,17 @@ function MainApp(props) {
               <div className="dreams_list flex ">
                 {dreams.map((dream, i) => {
                   return (
-                    <div className="dream flex flex-col" onClick={()=>handleShowUniqueDreamDetails}>
+                    <div
+                      className="dream flex flex-col"
+                      onClick={() => handleShowUniqueDreamDetails(dream.id)}
+                    >
                       <div className="dream__date">{dream.dream_date}</div>
                       <div className="dream__duration">
                         {dream.sleep_time} - {dream.wake_time}
                       </div>
-                      <p>
-                        {dream.dream}
-                      </p>
+                      
+                        <p>{dream.dream}</p>
+                      
                     </div>
                   );
                 })}
